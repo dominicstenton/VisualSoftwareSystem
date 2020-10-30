@@ -1,0 +1,10 @@
+C:\Users\Domin\source\repos\VisualSoftwareSystem\VisualSoftwareSystem\bin\Debug\VisualSoftwareSystem.exe.config
+C:\Users\Domin\source\repos\VisualSoftwareSystem\VisualSoftwareSystem\bin\Debug\VisualSoftwareSystem.exe
+C:\Users\Domin\source\repos\VisualSoftwareSystem\VisualSoftwareSystem\bin\Debug\VisualSoftwareSystem.pdb
+C:\Users\Domin\source\repos\VisualSoftwareSystem\VisualSoftwareSystem\obj\Debug\VisualSoftwareSystem.csprojAssemblyReference.cache
+C:\Users\Domin\source\repos\VisualSoftwareSystem\VisualSoftwareSystem\obj\Debug\VisualSoftwareSystem.Form1.resources
+C:\Users\Domin\source\repos\VisualSoftwareSystem\VisualSoftwareSystem\obj\Debug\VisualSoftwareSystem.Properties.Resources.resources
+C:\Users\Domin\source\repos\VisualSoftwareSystem\VisualSoftwareSystem\obj\Debug\VisualSoftwareSystem.csproj.GenerateResource.cache
+C:\Users\Domin\source\repos\VisualSoftwareSystem\VisualSoftwareSystem\obj\Debug\VisualSoftwareSystem.csproj.CoreCompileInputs.cache
+C:\Users\Domin\source\repos\VisualSoftwareSystem\VisualSoftwareSystem\obj\Debug\VisualSoftwareSystem.exe
+C:\Users\Domin\source\repos\VisualSoftwareSystem\VisualSoftwareSystem\obj\Debug\VisualSoftwareSystem.pdb
