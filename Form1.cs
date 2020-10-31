@@ -23,22 +23,25 @@ namespace VisualSoftwareSystem
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            //nothing here yet
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-
+            //nothing here yet
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //  var formPopup = new Form();
+            // formPopup.Show(this); // if you need non-modal window
+            MessageBox.Show("An application used to simulate a programming language for educational purposes. Written by Dominic Stenton");
 
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+            //nothing here yet
         }
 
         private void commandLine_TextChanged(object sender, EventArgs e)
@@ -61,7 +64,25 @@ namespace VisualSoftwareSystem
                 else if (Command.Equals("square") == true)
                 {
                     DrawingCanvasOutput.SquareDrawing(25);
-                    Console.WriteLine("LINE");
+                    Console.WriteLine("SQUARE");
+                }
+
+                else if (Command.Equals("circle") == true)
+                {
+                    DrawingCanvasOutput.CircleDrawing(50);
+                    Console.WriteLine("CIRCLE");
+                }
+
+                else if (Command.Equals("triangle") == true)
+                {
+                    DrawingCanvasOutput.TriangleDrawing(50);
+                    Console.WriteLine("TRIANGLE");
+                }
+
+                else if (Command.Equals("clear") == true)
+                {
+                 //   DrawingCanvasOutput.Image.Dispose();
+                    Console.WriteLine("CLEARED TEXT BOX");
                 }
 
                 CommandLineTextBox.Text = "";
@@ -69,6 +90,7 @@ namespace VisualSoftwareSystem
 
             }
         }
+
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
@@ -92,6 +114,16 @@ namespace VisualSoftwareSystem
         {
             Graphics g = e.Graphics;
             g.DrawImageUnscaled(OutputBitmap, 0, 0);
+        }
+
+        private void closeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //nothing here yet
         }
     }
 }
