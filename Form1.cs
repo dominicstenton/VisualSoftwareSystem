@@ -12,7 +12,10 @@ namespace VisualSoftwareSystem
 {
     public partial class Form1 : Form
     {
-        Bitmap OutputBitmap = new Bitmap(640, 480); //change these dimentions to x instead of specific pixels
+        static int xSize = 480;
+        static int ySize = 640;
+
+        Bitmap OutputBitmap = new Bitmap(xSize, ySize); //change these dimentions to x instead of specific pixels
         DrawingSystem DrawingCanvasOutput;
 
         public Form1()
@@ -55,38 +58,64 @@ namespace VisualSoftwareSystem
             if (e.KeyCode == Keys.Enter)
             {
                 String Command = CommandLineTextBox.Text.Trim().ToLower();
-                if (Command.Equals("line") == true)
-                {
-                    DrawingCanvasOutput.DrawLine(160, 120);
-                    Console.WriteLine("LINE");
-                }
 
-                else if (Command.Equals("square") == true)
-                {
-                    DrawingCanvasOutput.SquareDrawing(25);
-                    Console.WriteLine("SQUARE");
-                }
+                String[] Commands = Command.Split(' ', ',');
 
-                else if (Command.Equals("circle") == true)
+                try
                 {
-                    DrawingCanvasOutput.CircleDrawing(50);
-                    Console.WriteLine("CIRCLE");
-                }
+                    String Instruct = Commands[0];
+                    int Var1 = int.Parse(Commands[1]);
+                    int Var2 = int.Parse(Commands[2]);
 
-                else if (Command.Equals("triangle") == true)
+
+                    if (Commands[0].Equals("drawline") == true)
+                    {
+                        DrawingCanvasOutput.DrawLine(Var1, Var2);
+                        Console.WriteLine("LINE");
+                    }
+
+                    else if (Commands[0].Equals("moveline") == true)
+                    {
+                        DrawingCanvasOutput.MoveLine(Var1, Var2);
+                        Console.WriteLine("LINE");
+                    }
+
+                    else if (Commands[0].Equals("square") == true)
+                    {
+                        DrawingCanvasOutput.SquareDrawing(Var1, Var2);
+                        Console.WriteLine("SQUARE");
+                    }
+
+                    else if (Commands[0].Equals("circle") == true)
+                    {
+                        DrawingCanvasOutput.CircleDrawing(Var1, Var2);
+                        Console.WriteLine("CIRCLE");
+                    }
+
+                    else if (Commands[0].Equals("triangle") == true)
+                    {
+                        DrawingCanvasOutput.TriangleDrawing(Var2, Var2);
+                        Console.WriteLine("TRIANGLE");
+                    }
+
+                    else if (Command.Equals("clear") == true)
+                    {
+                        //   DrawingCanvasOutput.Image.Dispose();
+                        Console.WriteLine("CLEARED TEXT BOX");
+                    }
+
+
+                    CommandLineTextBox.Text = "";
+                    Refresh();
+                }
+                catch (FormatException i)
                 {
-                    DrawingCanvasOutput.TriangleDrawing(50);
-                    Console.WriteLine("TRIANGLE");
+                    Console.WriteLine("ExampleFILLHERE");
                 }
-
-                else if (Command.Equals("clear") == true)
+                catch (IndexOutOfRangeException i)
                 {
-                 //   DrawingCanvasOutput.Image.Dispose();
-                    Console.WriteLine("CLEARED TEXT BOX");
+                    Console.WriteLine("ExampleFILLHERE");
                 }
-
-                CommandLineTextBox.Text = "";
-                Refresh();
 
             }
         }
