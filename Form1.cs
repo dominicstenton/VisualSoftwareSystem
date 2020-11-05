@@ -99,9 +99,11 @@ namespace VisualSoftwareSystem
                     }
 
                     else if (Command.Equals("clear") == true)
-                    {
+                    { 
                         //   DrawingCanvasOutput.Image.Dispose();
                         Console.WriteLine("CLEARED TEXT BOX");
+
+                        //THIS IS THE "RESET COMMAND MOVES TURTLE/CURSOR TO INITIAL POSITION"
                     }
 
 
@@ -110,11 +112,19 @@ namespace VisualSoftwareSystem
                 }
                 catch (FormatException i)
                 {
-                    Console.WriteLine("ExampleFILLHERE");
+                    //Console.WriteLine("ExampleFILLHERE");
+                    //  CommandLineTextBox.Text = "Hello";
+                    ErrorMessageBox.Text = "Invalid Parameter";
+                   // ErrorMessageBox.Dispose();
                 }
+
+
                 catch (IndexOutOfRangeException i)
                 {
-                    Console.WriteLine("ExampleFILLHERE");
+                    //Console.WriteLine("ExampleFILLHERE");
+                    // CommandLineTextBox.Text = "Hello"; 
+                    ErrorMessageBox.Text = "Invalid Parameter";
+                  //  ErrorMessageBox.Dispose();
                 }
 
             }
@@ -153,6 +163,11 @@ namespace VisualSoftwareSystem
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //nothing here yet
+        }
+
+        private void ErrorMessageBox_KeyDown(object sender, KeyEventArgs e)
+        {
+
         }
     }
 }

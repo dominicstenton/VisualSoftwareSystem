@@ -31,10 +31,11 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DrawingOutput = new System.Windows.Forms.PictureBox();
             this.CommandLineTextBox = new System.Windows.Forms.TextBox();
             this.CommandLineRichTextBox = new System.Windows.Forms.RichTextBox();
-            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ErrorMessageBox = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DrawingOutput)).BeginInit();
             this.SuspendLayout();
@@ -67,12 +68,19 @@
             this.closeToolStripMenuItem.Text = "Close";
             this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
             // 
+            // saveToolStripMenuItem
+            // 
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(54, 24);
+            this.saveToolStripMenuItem.Text = "Save";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
+            // 
             // DrawingOutput
             // 
             this.DrawingOutput.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.DrawingOutput.Location = new System.Drawing.Point(286, 41);
             this.DrawingOutput.Name = "DrawingOutput";
-            this.DrawingOutput.Size = new System.Drawing.Size(941, 356);
+            this.DrawingOutput.Size = new System.Drawing.Size(941, 315);
             this.DrawingOutput.TabIndex = 1;
             this.DrawingOutput.TabStop = false;
             this.DrawingOutput.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -97,18 +105,22 @@
             this.CommandLineRichTextBox.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             this.CommandLineRichTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.richTextBox1_KeyDown);
             // 
-            // saveToolStripMenuItem
+            // ErrorMessageBox
             // 
-            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(54, 24);
-            this.saveToolStripMenuItem.Text = "Save";
-            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
+            this.ErrorMessageBox.BackColor = System.Drawing.SystemColors.Info;
+            this.ErrorMessageBox.Location = new System.Drawing.Point(286, 375);
+            this.ErrorMessageBox.Multiline = true;
+            this.ErrorMessageBox.Name = "ErrorMessageBox";
+            this.ErrorMessageBox.Size = new System.Drawing.Size(941, 63);
+            this.ErrorMessageBox.TabIndex = 4;
+            this.ErrorMessageBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ErrorMessageBox_KeyDown);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1253, 450);
+            this.Controls.Add(this.ErrorMessageBox);
             this.Controls.Add(this.CommandLineRichTextBox);
             this.Controls.Add(this.CommandLineTextBox);
             this.Controls.Add(this.DrawingOutput);
@@ -134,6 +146,7 @@
         private System.Windows.Forms.RichTextBox CommandLineRichTextBox;
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
+        private System.Windows.Forms.TextBox ErrorMessageBox;
     }
 }
 
